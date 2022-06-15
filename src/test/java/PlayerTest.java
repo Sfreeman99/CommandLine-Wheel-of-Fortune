@@ -23,4 +23,9 @@ public class PlayerTest {
         p.setName("test");
         Assert.assertEquals("test", p.name);
     }
+    @Test
+    public void test_PlayerScoreSetsCorrectly(){
+        p.setScore(100);
+        Assert.assertEquals(100, p.score);
+    }
 }
