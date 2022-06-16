@@ -79,15 +79,48 @@ public class GameTest {
 
     }
     @Test
-    public void test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0(){
+    public void test_ifWheelSpinIs250_isBankruptSetCurrentPlayerScoreTo0(){
         g.addPlayer(p1,p2);
         // Change the score of player one
         p1.setScore(2000);
-        // Spin the wheel return 250 or 350
+        p2.setScore(3000);
+        // Spin the wheel return 250 or 350 which are Bankrupt numbers
         int wheelNumber = 250;
         // Pass the number to isBankrupt and it should set the score of the player to 0
         g.isBankrupt(wheelNumber);
-        //
-        //Assert.assertEquals(0, p1.score);
+        // p1 score is set to 0
+        Assert.assertEquals(0, p1.score);
+        // p2 score is still the same
+        Assert.assertEquals(3000,p2.score);
+    }
+    @Test
+    public void test_ifWheelSpinIs350_isBankruptSetsCurrentPlayerScoreTo0(){
+        g.addPlayer(p1,p2);
+        // Change the score of player one
+        p1.setScore(2000);
+        p2.setScore(3000);
+        // Spin the wheel return 250 or 350 which are Bankrupt numbers
+        int wheelNumber = 350;
+        // Pass the number to isBankrupt and it should set the score of the player to 0
+        g.isBankrupt(wheelNumber);
+        // p1 score is set to 0
+        Assert.assertEquals(0, p1.score);
+        // p2 score is still the same
+        Assert.assertEquals(3000,p2.score);
+    }
+    @Test
+    public void test_ifWheelSpinIsNot250Or350_isBankruptDoesNotSetCurrentPlayerScoreTo0(){
+        g.addPlayer(p1,p2);
+        // Change the score of player one
+        p1.setScore(2000);
+        p2.setScore(3000);
+        // Spin the wheel return 250 or 350 which are Bankrupt numbers
+        int wheelNumber = 200;
+        // Pass the number to isBankrupt and it should set the score of the player to 0
+        g.isBankrupt(wheelNumber);
+        // p1 score is set to 0
+        Assert.assertEquals(2000, p1.score);
+        // p2 score is still the same
+        Assert.assertEquals(3000,p2.score);
     }
 }
