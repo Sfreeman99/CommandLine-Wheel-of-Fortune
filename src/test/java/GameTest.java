@@ -71,4 +71,23 @@ public class GameTest {
         Assert.assertEquals(p2.name, g.getPlayerName());
 
     }
+    @Test
+    public void test_spinWheelReturnIntBetween100And1000In100Increments(){
+        g.addPlayer(p1,p2);
+        int wheelNumber = g.spinWheel();
+        assert wheelNumber >= 100 && wheelNumber <= 1000;
+
+    }
+    @Test
+    public void test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0(){
+        g.addPlayer(p1,p2);
+        // Change the score of player one
+        p1.setScore(2000);
+        // Spin the wheel return 250 or 350
+        int wheelNumber = 250;
+        // Pass the number to isBankrupt and it should set the score of the player to 0
+        g.isBankrupt(wheelNumber);
+        //
+        //Assert.assertEquals(0, p1.score);
+    }
 }

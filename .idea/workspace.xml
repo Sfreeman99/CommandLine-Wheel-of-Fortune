@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac239064-7dde-4ec6-909d-bf932c3e3539" name="Changes" comment="Wheel of Fortune Game class accepts multiple players">
-      <change afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +59,7 @@
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.All in wheelOfFortune">
+  <component name="RunManager" selected="JUnit.GameTest.test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0">
     <configuration name="All in wheelOfFortune" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wheelOfFortune" />
       <option name="PACKAGE_NAME" value="" />
@@ -76,26 +77,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.test_GameInitsWithFourPlayers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wheelOfFortune" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="test_GameInitsWithFourPlayers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="GameTest.test_GameInitsWithTwoPlayers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wheelOfFortune" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="test_GameInitsWithTwoPlayers" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameTest.test_WhenTwoPlayersAreAdded_GameStarts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wheelOfFortune" />
       <option name="PACKAGE_NAME" value="" />
@@ -106,13 +87,33 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="GameTest.test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wheelOfFortune" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="METHOD_NAME" value="test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.test_spinWheelReturnIntBetween100And1000In100Increments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wheelOfFortune" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="METHOD_NAME" value="test_spinWheelReturnIntBetween100And1000In100Increments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.GameTest.test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" />
         <item itemvalue="JUnit.All in wheelOfFortune" />
+        <item itemvalue="JUnit.GameTest.test_spinWheelReturnIntBetween100And1000In100Increments" />
         <item itemvalue="JUnit.GameTest" />
         <item itemvalue="JUnit.GameTest.test_WhenTwoPlayersAreAdded_GameStarts" />
-        <item itemvalue="JUnit.GameTest.test_GameInitsWithTwoPlayers" />
-        <item itemvalue="JUnit.GameTest.test_GameInitsWithFourPlayers" />
       </list>
     </recent_temporary>
   </component>
@@ -125,7 +126,8 @@
       <option name="presentableId" value="Default" />
       <updated>1655180893156</updated>
       <workItem from="1655180897332" duration="3067000" />
-      <workItem from="1655262872380" duration="9411000" />
+      <workItem from="1655262872380" duration="9437000" />
+      <workItem from="1655357348966" duration="2317000" />
     </task>
     <task id="LOCAL-00001" summary="INIT">
       <created>1655190738380</created>
@@ -155,7 +157,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655272938964</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Wheel of Fortune Game class accepts multiple players">
+      <created>1655273034349</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655273034349</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
