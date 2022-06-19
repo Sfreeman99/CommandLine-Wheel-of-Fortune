@@ -61,14 +61,14 @@ public class GameTest {
     public void test_getPlayer_returnsPlayerCorrectInformation(){
         // Add the players
         g.addPlayer(p1,p2);
-        // Call the getPlayerName Method
-        g.getPlayerName();
+        // Call the getCurrentPlayerName Method
+        g.getCurrentPlayerName();
         // it should return the name and score of the player who turn it is
-        Assert.assertEquals(p1.name, g.getPlayerName());
+        Assert.assertEquals(p1.name, g.getCurrentPlayerName());
         // Change the Player Turn
         g.PLAYER_TURN = 1;
         // It should be P2 name now
-        Assert.assertEquals(p2.name, g.getPlayerName());
+        Assert.assertEquals(p2.name, g.getCurrentPlayerName());
 
     }
     @Test
@@ -94,7 +94,7 @@ public class GameTest {
         Assert.assertEquals(3000,p2.score);
     }
     @Test
-    public void test_ifWheelSpinIs350_isBankruptSetsCurrentPlayerScoreTo0(){
+    public void test_ifWheelSpinIs350_isBankruptSetsCurrentPlayerScoreTo0AndNextPlayerTurn(){
         g.addPlayer(p1,p2);
         // Change the score of player one
         p1.setScore(2000);
@@ -107,6 +107,8 @@ public class GameTest {
         Assert.assertEquals(0, p1.score);
         // p2 score is still the same
         Assert.assertEquals(3000,p2.score);
+        Assert.assertEquals(1,g.PLAYER_TURN);
+
     }
     @Test
     public void test_ifWheelSpinIsNot250Or350_isBankruptDoesNotSetCurrentPlayerScoreTo0(){
@@ -122,5 +124,49 @@ public class GameTest {
         Assert.assertEquals(2000, p1.score);
         // p2 score is still the same
         Assert.assertEquals(3000,p2.score);
+        Assert.assertEquals(0,g.PLAYER_TURN);
+    }
+    @Test
+    public void test_ifWheelspinIs150_CurrentPlayerLoosesTheirTurn(){
+        // Code for this tomorrow
+        // add players
+        g.addPlayer(p1,p2);
+        // set their scores
+        p1.setScore(2000);
+        p2.setScore(3000);
+        // set the wheel number to 150
+        int wheelNumber = 150;
+        // the current turn should be changed to the next player
+        g.loseTurn(wheelNumber);
+        Assert.assertEquals(1,g.PLAYER_TURN);
+    }
+    @Test
+    public void test_ifWheelspinIsNot150_loseTurnDoesNotGoToNextPlayer(){
+        // Code for this tomorrow
+        // add players
+        g.addPlayer(p1,p2);
+        // set their scores
+        p1.setScore(2000);
+        p2.setScore(3000);
+        // set the wheel number to 150
+        int wheelNumber = 0;
+        // the current turn should be changed to the next player
+        g.loseTurn(wheelNumber);
+        Assert.assertEquals(0,g.PLAYER_TURN);
+        assert true;
+    }
+    @Test
+    public void test_ifWheelspinIs150ForLastPlayer_loseTurnCorrectlySetsTheTurnToFirstPlayer(){
+        // Code for this tomorrow
+        // add players
+        g.addPlayer(p1,p2);
+        // set their scores
+        p1.setScore(2000);
+        p2.setScore(3000);
+        // set the wheel number to 150
+        int wheelNumber = 150;
+        g.loseTurn(wheelNumber);
+        g.loseTurn(wheelNumber);
+        Assert.assertEquals(0,g.PLAYER_TURN);
     }
 }

@@ -20,10 +20,17 @@ public class Game {
         }
     }
 
-    public String getPlayerName() {
+    public String getCurrentPlayerName() {
         return this.players.get(PLAYER_TURN).name;
     }
+    public int getCurrentPlayerScore() {
+        return 1;
+    }
 
+    /**
+     * Returns a random integer within the wheelNumbers int array
+     *
+     * **/
     public int spinWheel() {
         int max = 10;
         int min = 0;
@@ -31,10 +38,26 @@ public class Game {
         int randomNum = rand.nextInt((max - min) + 1) + min;
         return wheelNumbers[randomNum];
     }
-
+    /**
+     Sets the Current Player's score to 0 then goes to next player if wheelNumber is 250 or 350
+     @param wheelNumber integer that is return after spinning the wheel
+     **/
     public void isBankrupt(int wheelNumber) {
         if (wheelNumber == 250 || wheelNumber == 350) {
             this.players.get(PLAYER_TURN).setScore(BANKRUPT);
+            PLAYER_TURN++;
+
+        }
+
+    }
+    /**
+     Sets the Player turn to the next player if wheelNumber is 150
+    @param wheelNumber integer that is return after spinning the wheel
+     **/
+    public void loseTurn(int wheelNumber) {
+        if (wheelNumber == 150) {
+            PLAYER_TURN++;
+            if (PLAYER_TURN == PLAYER_COUNT) PLAYER_TURN = 0;
         }
     }
 }

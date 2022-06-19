@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac239064-7dde-4ec6-909d-bf932c3e3539" name="Changes" comment="Bankruptcy sets current player score to 0" />
+    <list default="true" id="ac239064-7dde-4ec6-909d-bf932c3e3539" name="Changes" comment="loseTurn method created and test and documentation">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,25 +46,25 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Downloaded.Files.Path.Enabled": "false",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="JUnit.All in wheelOfFortune">
     <configuration name="All in wheelOfFortune" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wheelOfFortune" />
@@ -79,21 +83,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest.test_WhenTwoPlayersAreAdded_GameStarts" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="wheelOfFortune" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="METHOD_NAME" value="test_WhenTwoPlayersAreAdded_GameStarts" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GameTest.test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wheelOfFortune" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GameTest" />
       <option name="METHOD_NAME" value="test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="GameTest.test_ifWheelspinIs150_CurrentPlayerLoosesTheirTurn" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="wheelOfFortune" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="GameTest" />
+      <option name="METHOD_NAME" value="test_ifWheelspinIs150_CurrentPlayerLoosesTheirTurn" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,10 +116,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in wheelOfFortune" />
+        <item itemvalue="JUnit.GameTest.test_ifWheelspinIs150_CurrentPlayerLoosesTheirTurn" />
         <item itemvalue="JUnit.GameTest.test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" />
         <item itemvalue="JUnit.GameTest.test_spinWheelReturnIntBetween100And1000In100Increments" />
         <item itemvalue="JUnit.GameTest" />
-        <item itemvalue="JUnit.GameTest.test_WhenTwoPlayersAreAdded_GameStarts" />
       </list>
     </recent_temporary>
   </component>
@@ -129,7 +133,8 @@
       <updated>1655180893156</updated>
       <workItem from="1655180897332" duration="3067000" />
       <workItem from="1655262872380" duration="9437000" />
-      <workItem from="1655357348966" duration="4158000" />
+      <workItem from="1655357348966" duration="4382000" />
+      <workItem from="1655608111903" duration="4785000" />
     </task>
     <task id="LOCAL-00001" summary="INIT">
       <created>1655190738380</created>
@@ -187,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655361581547</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Add workspace xml">
+      <created>1655361660267</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1655361660267</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,6 +224,8 @@
     <MESSAGE value="Create spinWheel method returns int between 100 and 1000" />
     <MESSAGE value="workspace add" />
     <MESSAGE value="Bankruptcy sets current player score to 0" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bankruptcy sets current player score to 0" />
+    <MESSAGE value="Add workspace xml" />
+    <MESSAGE value="loseTurn method created and test and documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="loseTurn method created and test and documentation" />
   </component>
 </project>
