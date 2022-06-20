@@ -3,6 +3,7 @@ import junit.framework.Assert;
 import org.example.Player;
 import org.example.Game;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.RepeatedTest;
 import org.junit.jupiter.api.Test;
 
 public class GameTest {
@@ -24,6 +25,37 @@ public class GameTest {
         // Initialize Game
         g = new Game();
 
+    }
+    @Test
+    public void test_gettingCurrentPlayerName(){
+        // load players in game
+        g.addPlayer(p1,p2,p3);
+        // Shows first player information first
+        String name = g.getCurrentPlayerName();
+        Assert.assertEquals(name, p1.name);
+        // Change the player turn to last player
+        g.PLAYER_TURN = 2;
+        // name should be last player name
+        name = g.getCurrentPlayerName();
+        Assert.assertEquals(name, p3.name);
+    }
+    @Test
+    public void test_gettingCurrentPlayerScoreReturnsCorrectly(){
+        //set scores
+        p1.setScore(2000);
+        p2.setScore(3000);
+        p3.setScore(4000);
+        // load players in game
+        g.addPlayer(p1,p2,p3);
+
+        // Shows first player information first
+        long score = g.getCurrentPlayerScore();
+        Assert.assertEquals(score, p1.score);
+        // Change the player turn to last player
+        g.PLAYER_TURN = 2;
+        // score should be last player score
+        score = g.getCurrentPlayerScore();
+        Assert.assertEquals(score, p3.score);
     }
 
     @Test

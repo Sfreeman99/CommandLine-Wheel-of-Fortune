@@ -23,8 +23,8 @@ public class Game {
     public String getCurrentPlayerName() {
         return this.players.get(PLAYER_TURN).name;
     }
-    public int getCurrentPlayerScore() {
-        return 1;
+    public long getCurrentPlayerScore() {
+        return this.players.get(PLAYER_TURN).score;
     }
 
     /**

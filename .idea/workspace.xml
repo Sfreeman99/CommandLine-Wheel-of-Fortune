@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ac239064-7dde-4ec6-909d-bf932c3e3539" name="Changes" comment="loseTurn method created and test and documentation">
+    <list default="true" id="ac239064-7dde-4ec6-909d-bf932c3e3539" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/GameTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/GameTest.java" afterDir="false" />
@@ -74,11 +74,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GameTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="GameTest.test_gettingCurrentPlayerName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="wheelOfFortune" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="GameTest" />
-      <option name="TEST_OBJECT" value="class" />
+      <option name="METHOD_NAME" value="test_gettingCurrentPlayerName" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -116,10 +117,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.All in wheelOfFortune" />
+        <item itemvalue="JUnit.GameTest.test_gettingCurrentPlayerName" />
         <item itemvalue="JUnit.GameTest.test_ifWheelspinIs150_CurrentPlayerLoosesTheirTurn" />
         <item itemvalue="JUnit.GameTest.test_ifIsBankruptReturnsTrue_SetCurrentPlayerScoreTo0" />
         <item itemvalue="JUnit.GameTest.test_spinWheelReturnIntBetween100And1000In100Increments" />
-        <item itemvalue="JUnit.GameTest" />
       </list>
     </recent_temporary>
   </component>
@@ -134,7 +135,7 @@
       <workItem from="1655180897332" duration="3067000" />
       <workItem from="1655262872380" duration="9437000" />
       <workItem from="1655357348966" duration="4382000" />
-      <workItem from="1655608111903" duration="4785000" />
+      <workItem from="1655608111903" duration="7045000" />
     </task>
     <task id="LOCAL-00001" summary="INIT">
       <created>1655190738380</created>
@@ -199,7 +200,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655361660267</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="loseTurn method created and test and documentation">
+      <created>1655613528833</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1655613528833</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,5 +235,8 @@
     <MESSAGE value="Add workspace xml" />
     <MESSAGE value="loseTurn method created and test and documentation" />
     <option name="LAST_COMMIT_MESSAGE" value="loseTurn method created and test and documentation" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/wheelOfFortune$All_in_wheelOfFortune.ic" NAME="All in wheelOfFortune Coverage Results" MODIFIED="1655614968235" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
 </project>
